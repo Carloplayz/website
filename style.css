@@ -1,0 +1,128 @@
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1f2937, #111827);
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.profile-container {
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Profile Picture */
+.profile-pic {
+  margin: 0 auto 20px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.25);
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Main Name */
+.main-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.main-name:hover {
+  transform: scale(1.25);
+}
+
+/* Online Name */
+.online-name {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.2rem;
+  color: #9ca3af;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.online-name:hover {
+  transform: scale(1.25);
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icon {
+  font-size: 2rem;
+  color: #9ca3af;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.6); /* Increased size */
+}
+
+/* Colors for Social Icons */
+.social-icon.facebook:hover {
+  color: #1877f2;
+}
+
+.social-icon.instagram:hover {
+  color: #e1306c;
+}
+
+.social-icon.github:hover {
+  color: #4078c0;
+}
+
+.social-icon.reddit:hover {
+  color: #ff4500;
+}
+
+.social-icon.steam:hover {
+  color: #00adee;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-name {
+    font-size: 2rem;
+  }
+  .online-name {
+    font-size: 1rem;
+  }
+  .social-icon {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-name {
+    font-size: 1.8rem;
+  }
+  .online-name {
+    font-size: 0.9rem;
+  }
+  .social-icon {
+    font-size: 1.5rem;
+  }
+}
