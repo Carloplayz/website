@@ -18,6 +18,13 @@ body {
   transition: transform 0.3s ease;
 }
 
+/* Profile Wrapper */
+.profile-wrapper {
+  display: flex;
+  flex-direction: column; /* Default layout for mobile */
+  align-items: center;    /* Center align for mobile */
+}
+
 /* Profile Picture */
 .profile-pic {
   margin: 0 auto 20px;
@@ -30,7 +37,7 @@ body {
 }
 
 .profile-pic:hover {
-  transform: scale(1.25);
+  transform: scale(1.1);
 }
 
 .profile-pic img {
@@ -39,7 +46,11 @@ body {
   object-fit: cover;
 }
 
-/* Main Name */
+/* Profile Content */
+.profile-content {
+  text-align: center;
+}
+
 .main-name {
   font-size: 2.5rem;
   font-weight: 700;
@@ -48,10 +59,9 @@ body {
 }
 
 .main-name:hover {
-  transform: scale(1.25);
+  transform: scale(1.1);
 }
 
-/* Online Name */
 .online-name {
   font-family: 'Roboto Mono', monospace;
   font-size: 1.2rem;
@@ -61,7 +71,7 @@ body {
 }
 
 .online-name:hover {
-  transform: scale(1.25);
+  transform: scale(1.1);
 }
 
 /* Social Icons */
@@ -98,11 +108,32 @@ body {
   color: #ff4500;
 }
 
-.social-icon.steam:hover {
-  color: #00adee;
+.social-icon.gmail:hover {
+  color: #d44638; /* Gmail red */
 }
 
 /* Responsive Design */
+
+/* Tablet and PC Layout */
+@media (min-width: 768px) {
+  .profile-wrapper {
+    flex-direction: row;    /* Items side-by-side */
+    align-items: center;    /* Center vertically */
+    justify-content: center;
+    gap: 20px;              /* Add some spacing between columns */
+  }
+
+  .profile-pic {
+    margin: 0;              /* Remove bottom margin since it's side-by-side */
+    width: 200px;           /* Slightly larger avatar for PC/tablet */
+    height: 200px;
+  }
+
+  .profile-content {
+    text-align: left;       /* Align content to the left */
+  }
+}
+
 @media (max-width: 768px) {
   .main-name {
     font-size: 2rem;
